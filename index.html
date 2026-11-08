@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The official online home of the Nyambare Alumni 2022 Association.">
+  <title>Nyambare Alumni 2022 Association</title>
+  <style>
+    :root {
+      --green: #123c35;
+      --green-light: #1d5b4c;
+      --gold: #e8b957;
+      --cream: #f7f5ef;
+      --ink: #17231f;
+      --muted: #61706a;
+      --line: #e4e9e4;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 85px; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font: 16px/1.65 system-ui, sans-serif;
+    }
+    .wrap { width: min(1100px, calc(100% - 36px)); margin: auto; }
+    .topbar { background: var(--green); color: #edf4f1; font-size: .85rem; }
+    .topbar .wrap, footer .wrap {
+      display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+      padding-top: 8px; padding-bottom: 8px;
+    }
+    header { position: sticky; top: 0; background: white; border-bottom: 1px solid var(--line); }
+    nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: flex; gap: 11px; align-items: center; color: var(--green); font-weight: 800; text-decoration: none; }
+    .brand-mark { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; background: var(--green); color: var(--gold); }
+    .brand small { display: block; color: var(--muted); font-size: .72rem; }
+    .links { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+    .links a { color: #34433c; text-decoration: none; font-size: .85rem; font-weight: 650; }
+    .links a:hover { color: var(--green-light); text-decoration: underline; }
+    .hero {
+      padding: 78px 0;
+      color: white;
+      background: radial-gradient(ellipse at 86% 20%, #e8b95733, transparent 30%),
+                  linear-gradient(125deg, #10382f, #1c5849);
+    }
+    .hero-copy { max-width: 720px; }
+    .eyebrow { color: #f2d28c; font-size: .78rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    h1 { margin: 16px 0; font-size: clamp(2.6rem, 6vw, 4.8rem); line-height: 1.05; letter-spacing: -.05em; }
+    .hero p { max-width: 650px; color: #dce9e2; font-size: 1.1rem; }
+    .button { display: inline-block; margin: 8px 8px 0 0; padding: 10px 16px; border-radius: 8px; background: var(--gold); color: #18362d; font-weight: 800; text-decoration: none; }
+    .button.secondary { background: transparent; color: white; border: 1px solid #ffffff80; }
+    .intro { background: white; border-bottom: 1px solid var(--line); }
+    .intro-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 22px 0; }
+    .intro strong { display: block; color: var(--green); }
+    .intro span, .muted { color: var(--muted); }
+    .section { padding: 66px 0; }
+    .section.white { background: white; }
+    .heading { max-width: 700px; margin-bottom: 26px; }
+    .kicker { color: var(--green-light); font-size: .76rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    h2 { color: var(--green); font-size: clamp(1.9rem, 4vw, 2.6rem); line-height: 1.15; margin: 8px 0 12px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+    .card { padding: 22px; background: white; border: 1px solid var(--line); border-radius: 14px; }
+    .white .card { background: var(--cream); }
+    .card h3 { margin: 0 0 8px; color: var(--green); }
+    .card p { margin: 0; color: var(--muted); }
+    .number { display: grid; place-items: center; width: 38px; height: 38px; margin-bottom: 14px; border-radius: 10px; background: #e8f0eb; color: var(--green); font-weight: 900; }
+    .notice { padding: 16px 18px; border-left: 4px solid var(--gold); border-radius: 0 10px 10px 0; background: #fff8e9; color: #61512e; }
+    .notice p { margin: 0; }
+    .list { padding-left: 20px; color: var(--muted); }
+    .contact { padding: 25px; border-radius: 16px; background: var(--green); color: white; }
+    .contact h3 { margin: 0 0 6px; }
+    .contact p { margin: 0; color: #d4e4dc; }
+    .small { color: var(--muted); font-size: .88rem; }
+    footer { padding: 18px 0; background: #0d2e28; color: #d7e3dc; font-size: .88rem; }
+    footer .wrap { padding-top: 0; padding-bottom: 0; }
+    footer a { color: #f2d28c; }
+    @media (max-width: 800px) {
+      nav { align-items: flex-start; flex-direction: column; padding: 12px 0; }
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .intro-grid, .grid { grid-template-columns: 1fr; }
+      .section { padding: 50px 0; }
+      .hero { padding: 55px 0; }
+      .hero p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="wrap">
+    <span>Connection • Community • Shared progress</span>
+    <span>Nyambare Alumni · Class of 2022</span>
+  </div></div>
+
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="#home">
+        <span class="brand-mark">N022</span>
+        <span>NYAMBARE ALUMNI<small>Class of 2022 Association</small></span>
+      </a>
+      <div class="links">
+        <a href="#about">About</a><a href="#leadership">Leadership</a>
+        <a href="#membership">Membership</a><a href="#news">News</a>
+        <a href="#events">Events</a><a href="#financials">Financials</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home"><div class="wrap hero-copy">
+      <span class="eyebrow">A community that stays connected</span>
+      <h1>Welcome, Nyambare Alumni 2022.</h1>
+      <p>We are a community of Nyambare alumni building lasting connections, supporting one another and working together for a stronger future. This is our home for association information and official updates.</p>
+      <a class="button" href="#about">Discover our association</a>
+      <a class="button secondary" href="#contact">Get in touch</a>
+    </div></section>
+
+    <div class="intro"><div class="wrap intro-grid">
+      <div><strong>One alumni community</strong><span>Stay connected beyond the classroom.</span></div>
+      <div><strong>Shared purpose</strong><span>Encouraging fellowship and collective progress.</span></div>
+      <div><strong>Official information</strong><span>Updates, activities and approved reports.</span></div>
+    </div></div>
+
+    <section class="section" id="about"><div class="wrap">
+      <div class="heading"><span class="kicker">About us</span><h2>Our story and purpose</h2>
+        <p class="muted">The Nyambare Alumni 2022 Association brings together alumni who want to maintain their bonds and contribute positively to their community.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="number">01</div><h3>Our history</h3><p>Formed to keep Nyambare 2022 alumni connected after their shared school experience. Add founding milestones and the full history when officially confirmed.</p></article>
+        <article class="card"><div class="number">02</div><h3>Our vision</h3><p>A united and supportive alumni community creating meaningful opportunities for members and contributing to the wider community.</p></article>
+        <article class="card"><div class="number">03</div><h3>Our mission</h3><p>To strengthen alumni relationships through communication, responsible leadership, shared activities and mutual support.</p></article>
+      </div>
+      <article class="card" style="margin-top:17px"><h3>Our objectives</h3>
+        <ul class="list">
+          <li>Promote friendship, unity and cooperation among members.</li>
+          <li>Share useful information and opportunities within the alumni community.</li>
+          <li>Organize meetings, reunions and other agreed activities.</li>
+          <li>Support community initiatives through transparent, approved processes.</li>
+          <li>Maintain accountable records and communicate association decisions.</li>
+        </ul>
+      </article>
+    </div></section>
+
+    <section class="section white" id="leadership"><div class="wrap">
+      <div class="heading"><span class="kicker">Leadership</span><h2>Serving the association</h2>
+        <p class="muted">Officials coordinate association affairs and keep members informed.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><h3>Chairman</h3><p>Name and public contact details to be confirmed.</p></article>
+        <article class="card"><h3>Secretary</h3><p>Name and public contact details to be confirmed.</p></article>
+        <article class="card"><h3>Treasurer</h3><p>Name and public contact details to be confirmed.</p></article>
+        <article class="card"><h3>Other officials</h3><p>Committee members and roles can be listed once approved.</p></article>
+      </div>
+      <p class="small">Names are omitted until the association confirms them for public display.</p>
+    </div></section>
+
+    <section class="section" id="membership"><div class="wrap">
+      <div class="heading"><span class="kicker">Membership</span><h2>Stay part of the network</h2>
+        <p class="muted">Membership helps alumni stay informed, take part in activities and contribute to shared goals.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><h3>Registration</h3><p>Contact the association through verified official channels. Leadership should confirm registration requirements and process.</p></article>
+        <article class="card"><h3>Unique membership numbers</h3><p>Verified members may receive a unique number through the official register. Share numbers privately with members.</p></article>
+        <article class="card"><h3>Member information</h3><p>Share personal details only through a trusted official channel. This website does not collect registration information.</p></article>
+      </div>
+    </div></section>
+
+    <section class="section white" id="news"><div class="wrap">
+      <div class="heading"><span class="kicker">News &amp; announcements</span><h2>Official updates</h2>
+        <p class="muted">Association notices and decisions will be shared here after confirmation by the appropriate officials.</p>
+      </div>
+      <div class="notice"><p><strong>No announcements have been posted yet.</strong> Check back for verified association updates.</p></div>
+    </div></section>
+
+    <section class="section" id="events"><div class="wrap">
+      <div class="heading"><span class="kicker">Events</span><h2>Meet, reconnect and participate</h2>
+        <p class="muted">Meetings, reunions and other activities are opportunities to strengthen our alumni bonds.</p>
+      </div>
+      <div class="notice"><p><strong>No upcoming events have been announced yet.</strong> Dates, venues and details will appear once officially confirmed.</p></div>
+    </div></section>
+
+    <section class="section white" id="financials"><div class="wrap">
+      <div class="heading"><span class="kicker">Financial updates</span><h2>Transparency and accountability</h2>
+        <p class="muted">Only approved contribution summaries and accountability statements should be published here.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><h3>Contribution reports</h3><p>Approved summaries will be added when reviewed and authorized for publication.</p></article>
+        <article class="card"><h3>Accountability statements</h3><p>Reports should state the reporting period and approval status while protecting private financial details.</p></article>
+        <article class="card"><h3>Current status</h3><p>No approved financial report has been published yet.</p></article>
+      </div>
+    </div></section>
+
+    <section class="section" id="contact"><div class="wrap">
+      <div class="heading"><span class="kicker">Contact us</span><h2>Official communication channels</h2></div>
+      <div class="contact"><h3>Contact the association</h3><p>Official email, phone and social channels will be listed once verified by association leadership.</p></div>
+      <p class="small">Personal contact details are not shown until approved for public use.</p>
+    </div></section>
+  </main>
+
+  <footer><div class="wrap">
+    <span>© 2026 Nyambare Alumni 2022 Association</span><a href="#home">Back to top ↑</a>
+  </div></footer>
+</body>
+</html>
